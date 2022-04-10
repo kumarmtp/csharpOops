@@ -9,8 +9,20 @@ namespace Csharpinteview
 
     public class Shape
     {
-        public int Width { get; set; }
-        public int Hight { get; set; }
+        private int _width;
+        private int _hight;
+
+        public int Width
+        {
+            get => _width;
+            set => _width = value;
+        }
+
+        public int Hight
+        {
+            get => _hight;
+            set => _hight = value;
+        }
 
         public void Draw()
         {
@@ -21,7 +33,13 @@ namespace Csharpinteview
 
     public class Text : Shape
     {
-        public int Font { get; set; }
+        private int _font;
+
+        public int Font
+        {
+            get => _font;
+            set => _font = value;
+        }
     }
 
 }

@@ -4,8 +4,13 @@ namespace AbstractionVSEncapulation
 {
 
     //Abstrction only Expose what then need
+    //It is used to hide unwanted data and shows only 
+    //the required properties and methods.
 
     //Encapulation hiding Complaxcity
+    //It binds data members and member functions into a single unit 
+    //to prevent outsiders from accessing it directly.
+
     class Program
     {
         static void Main(string[] args)
@@ -24,8 +29,9 @@ namespace AbstractionVSEncapulation
 
     public class Employee
     {
-      
-        
+        private string _empName; //change value through geter setter only
+        private string _email;
+
 
         public Employee()
         {
@@ -33,8 +39,18 @@ namespace AbstractionVSEncapulation
 
         }
 
-        public string EmpName { get; set; }
-        public string Email { get; set; }
+        public string EmpName
+        {
+            get => _empName;
+            set => _empName = value;
+        }
+
+        public string Email
+        {
+            get => _email;
+            set => _email = value;
+        }
+
         public void AddEmployee()
         {
           
